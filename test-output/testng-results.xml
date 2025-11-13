@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-11-13T11:19:53 EST" name="CrossBrowserTest" finished-at="2025-11-13T11:20:08 EST" duration-ms="14344">
+    <groups>
+    </groups>
+    <test started-at="2025-11-13T11:19:53 EST" name="ChromeTest" finished-at="2025-11-13T11:20:08 EST" duration-ms="14344">
+      <class name="TestScripts.CollectionsGenricandNongeneric">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@4722ef0c]" started-at="2025-11-13T11:19:53 EST" name="loadConfig" finished-at="2025-11-13T11:19:53 EST" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadConfig -->
+        <test-method is-config="true" signature="browserSetUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@4722ef0c]" started-at="2025-11-13T11:19:53 EST" name="browserSetUp" finished-at="2025-11-13T11:20:00 EST" duration-ms="6806" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FIREFOX]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[PROD]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[linux]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetUp -->
+        <test-method signature="arrayCheck()[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@4722ef0c]" started-at="2025-11-13T11:20:00 EST" name="arrayCheck" finished-at="2025-11-13T11:20:00 EST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- arrayCheck -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@4722ef0c]" started-at="2025-11-13T11:20:00 EST" name="tearDown" finished-at="2025-11-13T11:20:02 EST" duration-ms="1461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="browserSetUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@4722ef0c]" started-at="2025-11-13T11:20:02 EST" name="browserSetUp" finished-at="2025-11-13T11:20:07 EST" duration-ms="4878" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FIREFOX]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[PROD]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[linux]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetUp -->
+        <test-method signature="arrayListCheck()[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@4722ef0c]" started-at="2025-11-13T11:20:07 EST" name="arrayListCheck" finished-at="2025-11-13T11:20:07 EST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- arrayListCheck -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@4722ef0c]" started-at="2025-11-13T11:20:07 EST" name="tearDown" finished-at="2025-11-13T11:20:08 EST" duration-ms="1137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@4722ef0c]" started-at="2025-11-13T11:20:08 EST" name="afterSuite" finished-at="2025-11-13T11:20:08 EST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- TestScripts.CollectionsGenricandNongeneric -->
+    </test> <!-- ChromeTest -->
+  </suite> <!-- CrossBrowserTest -->
+</testng-results>
