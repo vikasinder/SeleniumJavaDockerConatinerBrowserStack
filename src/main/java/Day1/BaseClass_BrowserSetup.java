@@ -554,6 +554,6 @@ public class BaseClass_BrowserSetup {
 	        // ✅ 3. Optional: Add a summary message or custom cleanup
 	        // Example: send report email, print results summary, etc.
 
-	        System.out.println("All browsers and resources have been closed successfully.");
+	        System.out.println("All browsers closed successfully.");
 	    }
 }
