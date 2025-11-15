@@ -414,7 +414,8 @@ public class BaseClass_BrowserSetup {
 	        
 	       
 
-	        String bsUrl = "https://" + bsUser + ":" + bsKey + "@hub.browserstack.com/wd/hub";
+	        //String bsUrl = "https://" + bsUser + ":" + bsKey + "@hub.browserstack.com/wd/hub";
+	        String bsUrl = "https://" + bsUser + ":" + bsKey + "@hub-cloud.browserstack.com/wd/hub";
 	        System.out.println("☁️ Connecting to BrowserStack Cloud...");
 
 	        DesiredCapabilities caps = new DesiredCapabilities();
