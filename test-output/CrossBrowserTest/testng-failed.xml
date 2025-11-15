@@ -5,10 +5,10 @@
     <listener class-name="Utilities.TestListner"/>
   </listeners>
   <test thread-count="2" parallel="tests" name="ChromeTest(failed)">
-    <parameter name="OS" value="linux"/>
-    <parameter name="browser" value="chrome"/>
-    <parameter name="Test_ENV_TestngFile" value="QA"/>
-    <parameter name="Execution_ENV_TestNgFile" value="docker"/>
+    <parameter name="OS" value="windows"/>
+    <parameter name="browser" value="FIREFOX"/>
+    <parameter name="Test_ENV_TestngFile" value="PROD"/>
+    <parameter name="Execution_ENV_TestNgFile" value="browserstack"/>
     <classes>
       <class name="TestScripts.CollectionsGenricandNongeneric">
         <methods>

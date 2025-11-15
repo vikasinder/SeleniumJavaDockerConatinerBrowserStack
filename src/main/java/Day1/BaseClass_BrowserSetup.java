@@ -238,6 +238,7 @@ public class BaseClass_BrowserSetup {
 			
 			//DriverFactory.getDriver().navigate().to(prop.getProperty(env + ".url"));
 			//either use get or Navigate()
+			test_environment = test_environment.toUpperCase().trim();
 			DriverFactory.getDriver().get(prop.getProperty(test_environment + ".url"));
 			System.out.println("Running tests on environment: " + test_environment);
 			
@@ -261,20 +262,26 @@ public class BaseClass_BrowserSetup {
 	
 	 public WebDriver initializeDriver(String executionEnvironment, String browser, String operatingSystem) throws Exception {
 
+		 
+		 // Here no assignment is done , we are just converting to lower case and re assigning to same variable
+		 
 	        executionEnvironment = executionEnvironment.toLowerCase();
 	        browser = browser.toLowerCase();
 	        operatingSystem = operatingSystem.toLowerCase();
 
+	        // Decide which driver to initialize based on execution environment
 	        switch (executionEnvironment) {
-
+	        // Local Execution : Here we are passing only browser as we are running on local machine
 	            case "local":
 	                return initLocalDriver(browser);
-
+	              // Docker/Selenium Grid Execution
+	                // Here we are passing both browser and operating system as we have multiple OS available on docker
 	            case "docker":
+	            	
 	                return initDockerDriver(browser, operatingSystem);
-
+	                // BrowserStack Cloud Execution
 	            case "browserstack":
-	                return initBrowserStackDriver(browser);
+	                return initBrowserStackDriver(browser,operatingSystem);
 
 	            default:
 	                throw new IllegalArgumentException("Unknown execution environment: " + executionEnvironment);
@@ -394,25 +401,56 @@ public class BaseClass_BrowserSetup {
 	    
 	   
 	    
-	    private WebDriver initBrowserStackDriver(String browser) throws Exception {
-	        String bsUser = System.getenv("BROWSERSTACK_USERNAME");
-	        String bsKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
+	    private WebDriver initBrowserStackDriver(String browser , String operatingSystem) throws Exception {
+	        
+	    	String bsUser = System.getProperty("BROWSERSTACK_USERNAME");
+	    	String bsKey  = System.getProperty("BROWSERSTACK_ACCESS_KEY");
+	    	
+//	    	String bsUser = System.getenv("BROWSERSTACK_USERNAME");
+//	        String bsKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
 
 	        if (bsUser == null) bsUser = prop.getProperty("browserstack.username");
 	        if (bsKey == null) bsKey = prop.getProperty("browserstack.accesskey");
+	        
+	       
 
 	        String bsUrl = "https://" + bsUser + ":" + bsKey + "@hub.browserstack.com/wd/hub";
 	        System.out.println("☁️ Connecting to BrowserStack Cloud...");
 
 	        DesiredCapabilities caps = new DesiredCapabilities();
 	        caps.setCapability("browserName", browser);
-	        caps.setCapability("browserVersion", "latest");
-	        caps.setCapability("os", "Windows");
-	        caps.setCapability("osVersion", "11");
+	        
+	        
+	        if (operatingSystem == null || operatingSystem.isEmpty()) {
+	            operatingSystem = "windows";  // Default
+	        }
+	     // --- Operating System Mapping ---
+	        switch (operatingSystem.toLowerCase()) {
+	        
+	            case "windows":
+	                caps.setCapability("os", "Windows");
+	                caps.setCapability("osVersion", "11");  // you can change to 10 if needed
+	                break;
+
+	            case "mac":
+	            case "macos":
+	                caps.setCapability("os", "OS X");
+	                caps.setCapability("osVersion", "Ventura"); // or Sonoma/Monterey
+	                break;
+
+	            case "linux":
+	                throw new IllegalArgumentException("❌ BrowserStack does NOT support Linux desktop browsers.");
+	                
+	            default:
+	                throw new IllegalArgumentException("Unsupported operating system: " + operatingSystem);
+	        }
+
+	        // Extra BrowserStack recommended capabilities
 	        caps.setCapability("project", "Selenium Practice");
 	        caps.setCapability("build", "Build #" + System.currentTimeMillis());
-	        caps.setCapability("name", browser + " Test on BrowserStack");
-
+	        caps.setCapability("name", browser +"On Operting system "+ operatingSystem + " Test on BrowserStack");
+	        
+	        
 	        return new RemoteWebDriver(new URL(bsUrl), caps);
 	    }
 	

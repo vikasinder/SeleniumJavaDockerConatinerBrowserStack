@@ -7,10 +7,10 @@
 </listeners>
 
   <test  name="ChromeTest" >
-     <parameter name="browser" value="FIREFOX" />
+     <parameter name="browser" value="chrome" />
     <parameter name="Test_ENV_TestngFile" value="PROD" />
     <parameter name="Execution_ENV_TestNgFile" value="local" />
-    <parameter name="OS" value="linux" />
+    <parameter name="OS" value="windows" />
   
 	<classes>
  		<class name="TestScripts.CollectionsGenricandNongeneric"/>

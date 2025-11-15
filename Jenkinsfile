@@ -12,7 +12,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git url: 'https://github.com/vikasinder/SeleniumJavaDockerConatinerBrowserStack.git', branch: 'main'
+                git url: 'https://github.com/vikasinder/SeleniumJavaDockerConatinerBrowserStack.git', branch: 'master'
             }
         }
 
