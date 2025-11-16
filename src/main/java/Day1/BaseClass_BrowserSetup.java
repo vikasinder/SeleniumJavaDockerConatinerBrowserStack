@@ -416,9 +416,6 @@ public class BaseClass_BrowserSetup {
 	        
 	       
 
-	        String bsUrl = "https://hub-cloud.browserstack.com/wd/hub";
-
-	        // bstack:options
 	        Map<String, Object> bstackOptions = new HashMap<>();
 	        bstackOptions.put("userName", bsUser);
 	        bstackOptions.put("accessKey", bsKey);
@@ -426,39 +423,27 @@ public class BaseClass_BrowserSetup {
 	        bstackOptions.put("buildName", "Build-" + System.currentTimeMillis());
 	        bstackOptions.put("sessionName", browser + " on " + operatingSystem);
 
-	        // Desired capabilities
+	        // Set OS inside bstackOptions
+	        switch (operatingSystem.toLowerCase()) {
+	            case "windows":
+	                bstackOptions.put("os", "Windows");
+	                bstackOptions.put("osVersion", "11");
+	                break;
+	            case "mac":
+	            case "macos":
+	                bstackOptions.put("os", "OS X");
+	                bstackOptions.put("osVersion", "Ventura");
+	                break;
+	            default:
+	                throw new IllegalArgumentException("Unsupported OS for BrowserStack: " + operatingSystem);
+	        }
+
 	        DesiredCapabilities caps = new DesiredCapabilities();
 	        caps.setCapability("browserName", browser);
 	        caps.setCapability("browserVersion", "latest"); // optional
 	        caps.setCapability("bstack:options", bstackOptions);
-	        
-	        if (operatingSystem == null || operatingSystem.isEmpty()) {
-	            operatingSystem = "windows";  // Default
-	        }
-	     // --- Operating System Mapping ---
-	        switch (operatingSystem.toLowerCase()) {
-	        
-	            case "windows":
-	                caps.setCapability("os", "Windows");
-	                caps.setCapability("osVersion", "11");  // you can change to 10 if needed
-	                break;
 
-	            case "mac":
-	            case "macos":
-	                caps.setCapability("os", "OS X");
-	                caps.setCapability("osVersion", "Ventura"); // or Sonoma/Monterey
-	                break;
-
-	            case "linux":
-	                throw new IllegalArgumentException("❌ BrowserStack does NOT support Linux desktop browsers.");
-	                
-	            default:
-	                throw new IllegalArgumentException("Unsupported operating system: " + operatingSystem);
-	        }
-
-	       
-	        
-	        return new RemoteWebDriver(new URL(bsUrl), caps);
+	        return new RemoteWebDriver(new URL("https://hub-cloud.browserstack.com/wd/hub"), caps);
 	    }
 	
 	
