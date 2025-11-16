@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -414,14 +416,21 @@ public class BaseClass_BrowserSetup {
 	        
 	       
 
-	        //String bsUrl = "https://" + bsUser + ":" + bsKey + "@hub.browserstack.com/wd/hub";
-	        String bsUrl = "https://" + bsUser + ":" + bsKey + "@hub-cloud.browserstack.com/wd/hub";
-	        System.out.println(bsUrl);
-	        System.out.println("☁️ Connecting to BrowserStack Cloud...");
+	        String bsUrl = "https://hub-cloud.browserstack.com/wd/hub";
 
+	        // bstack:options
+	        Map<String, Object> bstackOptions = new HashMap<>();
+	        bstackOptions.put("userName", bsUser);
+	        bstackOptions.put("accessKey", bsKey);
+	        bstackOptions.put("projectName", "Selenium Practice");
+	        bstackOptions.put("buildName", "Build-" + System.currentTimeMillis());
+	        bstackOptions.put("sessionName", browser + " on " + operatingSystem);
+
+	        // Desired capabilities
 	        DesiredCapabilities caps = new DesiredCapabilities();
 	        caps.setCapability("browserName", browser);
-	        
+	        caps.setCapability("browserVersion", "latest"); // optional
+	        caps.setCapability("bstack:options", bstackOptions);
 	        
 	        if (operatingSystem == null || operatingSystem.isEmpty()) {
 	            operatingSystem = "windows";  // Default
@@ -447,11 +456,7 @@ public class BaseClass_BrowserSetup {
 	                throw new IllegalArgumentException("Unsupported operating system: " + operatingSystem);
 	        }
 
-	        // Extra BrowserStack recommended capabilities
-	        caps.setCapability("project", "Selenium Practice");
-	        caps.setCapability("build", "Build #" + System.currentTimeMillis());
-	        caps.setCapability("name", browser +"On Operting system "+ operatingSystem + " Test on BrowserStack");
-	        
+	       
 	        
 	        return new RemoteWebDriver(new URL(bsUrl), caps);
 	    }
