@@ -8,12 +8,18 @@ import java.util.Set;
 import org.testng.annotations.Test;
 
 import Day1.BaseClass_BrowserSetup;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 
 public class CollectionsGenricandNongeneric extends BaseClass_BrowserSetup {
 	
 	// In Arrays And ArrayList we can use Index , as Items are in Indexing and Sorted Order But not with Set / Hashset
 	
 	@Test
+	@Description("Array Check")
+	@Epic("EP001")
+	@Feature("Feature1: Array Check")
 	public void arrayCheck()
 	{
 	// Homogenous Value: Values of one type only

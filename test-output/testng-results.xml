@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="0" skipped="2">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-14T18:40:26 EST" name="CrossBrowserTest" finished-at="2025-11-14T18:40:27 EST" duration-ms="682">
+  <suite started-at="2025-11-19T10:02:23 EST" name="CrossBrowserTest" finished-at="2025-11-19T10:02:51 EST" duration-ms="28386">
     <groups>
     </groups>
-    <test started-at="2025-11-14T18:40:26 EST" name="ChromeTest" finished-at="2025-11-14T18:40:27 EST" duration-ms="682">
+    <test started-at="2025-11-19T10:02:23 EST" name="ChromeTest" finished-at="2025-11-19T10:02:51 EST" duration-ms="28386">
       <class name="TestScripts.CollectionsGenricandNongeneric">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@4722ef0c]" started-at="2025-11-14T18:40:26 EST" name="loadConfig" finished-at="2025-11-14T18:40:26 EST" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@41d426b5]" started-at="2025-11-19T10:02:23 EST" name="loadConfig" finished-at="2025-11-19T10:02:23 EST" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="browserSetUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@4722ef0c]" started-at="2025-11-14T18:40:26 EST" name="browserSetUp" finished-at="2025-11-14T18:40:27 EST" duration-ms="627" status="FAIL">
+        <test-method is-config="true" signature="browserSetUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@41d426b5]" started-at="2025-11-19T10:02:23 EST" name="browserSetUp" finished-at="2025-11-19T10:02:43 EST" duration-ms="20408" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[FIREFOX]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
             <param index="1">
@@ -34,252 +34,52 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'VIKASINDER', ip: '10.0.0.91'
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: firefox, build: Build #1763163626789, name: firefox Test on BrowserStack, os: Windows, osVersion: 11, project: Selenium Practice}]}]
-Capabilities {browserName: firefox, build: Build #1763163626789, name: firefox Test on BrowserStack, os: Windows, osVersion: 11, project: Selenium Practice}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'VIKASINDER', ip: '10.0.0.91'
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: firefox, build: Build #1763163626789, name: firefox Test on BrowserStack, os: Windows, osVersion: 11, project: Selenium Practice}]}]
-Capabilities {browserName: firefox, build: Build #1763163626789, name: firefox Test on BrowserStack, os: Windows, osVersion: 11, project: Selenium Practice}
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
-at Day1.BaseClass_BrowserSetup.initBrowserStackDriver(BaseClass_BrowserSetup.java:453)
-at Day1.BaseClass_BrowserSetup.initializeDriver(BaseClass_BrowserSetup.java:283)
-at Day1.BaseClass_BrowserSetup.browserSetUp(BaseClass_BrowserSetup.java:184)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1570)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [build, name, os, osVersion, project]
-at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$4(NewSessionPayload.java:184)
-at java.base/java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:555)
-at java.base/java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:556)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
-at java.base/java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:556)
-at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:556)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:546)
-at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
-at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:611)
-at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:188)
-at org.openqa.selenium.remote.NewSessionPayload.<init>(NewSessionPayload.java:91)
-at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:127)
-at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:111)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
-at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetUp -->
-        <test-method signature="arrayCheck()[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@4722ef0c]" started-at="2025-11-14T18:40:27 EST" name="arrayCheck" finished-at="2025-11-14T18:40:27 EST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'VIKASINDER', ip: '10.0.0.91'
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: firefox, build: Build #1763163626789, name: firefox Test on BrowserStack, os: Windows, osVersion: 11, project: Selenium Practice}]}]
-Capabilities {browserName: firefox, build: Build #1763163626789, name: firefox Test on BrowserStack, os: Windows, osVersion: 11, project: Selenium Practice}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'VIKASINDER', ip: '10.0.0.91'
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: firefox, build: Build #1763163626789, name: firefox Test on BrowserStack, os: Windows, osVersion: 11, project: Selenium Practice}]}]
-Capabilities {browserName: firefox, build: Build #1763163626789, name: firefox Test on BrowserStack, os: Windows, osVersion: 11, project: Selenium Practice}
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
-at Day1.BaseClass_BrowserSetup.initBrowserStackDriver(BaseClass_BrowserSetup.java:453)
-at Day1.BaseClass_BrowserSetup.initializeDriver(BaseClass_BrowserSetup.java:283)
-at Day1.BaseClass_BrowserSetup.browserSetUp(BaseClass_BrowserSetup.java:184)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1570)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [build, name, os, osVersion, project]
-at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$4(NewSessionPayload.java:184)
-at java.base/java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:555)
-at java.base/java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:556)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
-at java.base/java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:556)
-at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:556)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:546)
-at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
-at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:611)
-at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:188)
-at org.openqa.selenium.remote.NewSessionPayload.<init>(NewSessionPayload.java:91)
-at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:127)
-at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:111)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
-at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+        <test-method signature="arrayCheck()[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@41d426b5]" started-at="2025-11-19T10:02:43 EST" name="arrayCheck" finished-at="2025-11-19T10:02:43 EST" duration-ms="47" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- arrayCheck -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@4722ef0c]" started-at="2025-11-14T18:40:27 EST" name="tearDown" finished-at="2025-11-14T18:40:27 EST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@41d426b5]" started-at="2025-11-19T10:02:43 EST" name="tearDown" finished-at="2025-11-19T10:02:44 EST" duration-ms="857" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="browserSetUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@4722ef0c]" started-at="2025-11-14T18:40:27 EST" name="browserSetUp" finished-at="2025-11-14T18:40:27 EST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="browserSetUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@41d426b5]" started-at="2025-11-19T10:02:44 EST" name="browserSetUp" finished-at="2025-11-19T10:02:50 EST" duration-ms="6184" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[PROD]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[browserstack]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetUp -->
-        <test-method signature="arrayListCheck()[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@4722ef0c]" started-at="2025-11-14T18:40:27 EST" name="arrayListCheck" finished-at="2025-11-14T18:40:27 EST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'VIKASINDER', ip: '10.0.0.91'
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: firefox, build: Build #1763163626789, name: firefox Test on BrowserStack, os: Windows, osVersion: 11, project: Selenium Practice}]}]
-Capabilities {browserName: firefox, build: Build #1763163626789, name: firefox Test on BrowserStack, os: Windows, osVersion: 11, project: Selenium Practice}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'VIKASINDER', ip: '10.0.0.91'
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: firefox, build: Build #1763163626789, name: firefox Test on BrowserStack, os: Windows, osVersion: 11, project: Selenium Practice}]}]
-Capabilities {browserName: firefox, build: Build #1763163626789, name: firefox Test on BrowserStack, os: Windows, osVersion: 11, project: Selenium Practice}
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
-at Day1.BaseClass_BrowserSetup.initBrowserStackDriver(BaseClass_BrowserSetup.java:453)
-at Day1.BaseClass_BrowserSetup.initializeDriver(BaseClass_BrowserSetup.java:283)
-at Day1.BaseClass_BrowserSetup.browserSetUp(BaseClass_BrowserSetup.java:184)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1570)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [build, name, os, osVersion, project]
-at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$4(NewSessionPayload.java:184)
-at java.base/java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:555)
-at java.base/java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:556)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
-at java.base/java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:556)
-at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:556)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:546)
-at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
-at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:611)
-at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:188)
-at org.openqa.selenium.remote.NewSessionPayload.<init>(NewSessionPayload.java:91)
-at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:127)
-at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:111)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
-at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+        <test-method signature="arrayListCheck()[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@41d426b5]" started-at="2025-11-19T10:02:50 EST" name="arrayListCheck" finished-at="2025-11-19T10:02:50 EST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- arrayListCheck -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@4722ef0c]" started-at="2025-11-14T18:40:27 EST" name="tearDown" finished-at="2025-11-14T18:40:27 EST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@41d426b5]" started-at="2025-11-19T10:02:50 EST" name="tearDown" finished-at="2025-11-19T10:02:51 EST" duration-ms="732" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@4722ef0c]" started-at="2025-11-14T18:40:27 EST" name="afterSuite" finished-at="2025-11-14T18:40:27 EST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:TestScripts.CollectionsGenricandNongeneric@41d426b5]" started-at="2025-11-19T10:02:51 EST" name="afterSuite" finished-at="2025-11-19T10:02:51 EST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

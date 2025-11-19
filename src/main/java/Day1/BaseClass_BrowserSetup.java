@@ -133,7 +133,7 @@ public class BaseClass_BrowserSetup {
 	
 	// Sending Enviornment variable from TestNG.xml
 	    public void browserSetUp(@Optional("chrome") String browserNameFromXML , @Optional("QA") String environmentFromXML,
-	    		@Optional("local") String executionEnvironment, String opertaingSystem) throws Exception
+	    		@Optional("local") String executionEnvironment,@Optional("windows") String opertaingSystem) throws Exception
 	{
 		// Opening Browser before each test
 		  System.out.println("This is Before Method");
@@ -159,6 +159,7 @@ public class BaseClass_BrowserSetup {
 		  	String browser = System.getProperty("browser");
 		    String test_environment = System.getProperty("TEST_ENV_CMD_LINE");  // QA/PROD/STAGE
 		    String execEnv = System.getProperty("EXECUTION_ENV_CMD_LINE"); // local/docker/browserstack
+		    String os = System.getProperty("OS");
 		    // Step 2: If not provided via command line, take from XML
 		    
 		    if (browser == null || browser.isEmpty())
@@ -167,6 +168,8 @@ public class BaseClass_BrowserSetup {
 		    	test_environment = environmentFromXML;
 		    if (execEnv == null || execEnv.isEmpty())
 		    	execEnv = executionEnvironment;
+		    if (os == null || os.isEmpty())
+		    	os = opertaingSystem;
 
 		    // Step 3: If not provided in XML, take from config file // There is no need for this code as you are passing
 		    // optional values as defalut parameters // if they are empty then u can use it
@@ -176,14 +179,17 @@ public class BaseClass_BrowserSetup {
 		    	test_environment = prop.getProperty("environment", "QA");
 		    if (execEnv == null || execEnv.isEmpty())
 		    	execEnv = prop.getProperty("execEnv", "local");
+		    if (os == null || os.isEmpty())
+		    	os = prop.getProperty("operatingSystem");;
 
 		    
 		    System.out.println("✅ Final Browser: " + browser);
 		    System.out.println("✅ Final Environment: " + test_environment);
+		    System.out.println("✅ Final Execution Environment: " + execEnv);
+		    System.out.println("✅ Final Operating System: " + os);
 		    
 		    
-		    
-		    driver = initializeDriver(execEnv, browser , opertaingSystem);
+		    driver = initializeDriver(execEnv, browser , os);
 		    DriverFactory.setDriver(driver);
 		  
 //		  if (browser.equalsIgnoreCase("Chrome")) {
@@ -261,7 +267,8 @@ public class BaseClass_BrowserSetup {
 	//// New Clear Model
 	///
 	///
-	
+	// This method will initialize the driver based upon execution environment
+	// It is returning WebDriver Object
 	 public WebDriver initializeDriver(String executionEnvironment, String browser, String operatingSystem) throws Exception {
 
 		 
